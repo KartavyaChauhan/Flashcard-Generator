@@ -1,0 +1,37 @@
+/* Basic layout */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+/* The flashcard itself */
+#card {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  min-height: 150px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#nav-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px; /* matches card width + padding */
+}
+
+/* Helper class to hide/show elements */
+.hidden {
+  display: none;
+}

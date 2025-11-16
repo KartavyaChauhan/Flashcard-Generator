@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Flashcard Generator</h1>
+
+  <form id="topic-form">
+    <label for="topic-input">Enter a topic:</label>
+    <input type="text" id="topic-input" placeholder="e.g., Photosynthesis">
+    <button type="submit">Generate Flashcards</button>
+  </form>
+
+  <div id="loading" class="hidden">Generating... please wait.</div>
+
+  <div id="flashcard-container" class="hidden">
+
+    <div id="card">
+      <p><strong>Question:</strong> <span id="question"></span></p>
+      <p><strong>Answer:</strong> <span id="answer"></span></p>
+      <p><strong>Difficulty:</strong> <span id="difficulty"></span></p>
+    </div>
+
+    <div id="nav-buttons">
+      <button id="prev-btn">Prev</button>
+      <span id="card-counter"></span>
+      <button id="next-btn">Next</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
