@@ -14,7 +14,6 @@ app.use(express.json());
 /**
  * This is our main helper function. It calls the LLM, validates the output,
  * and retries if the LLM gives a bad response.
- * This fulfills requirement #8.
  */
 async function generateAndValidateFlashcards(topic, retries = 3) {
   // Ordered list of candidate model identifiers. The server will try each
@@ -101,10 +100,10 @@ async function generateAndValidateFlashcards(topic, retries = 3) {
 }
 
 // --- The API Endpoint ---
-// This is what the frontend will call (Requirement #1)
+// This is what the frontend will call 
 app.post('/generate-flashcards', async (req, res) => {
   try {
-    // Get the topic from the request body (Requirement #2)
+    // Get the topic from the request body 
     const { topic } = req.body;
 
     // Validation (Requirement #7)
@@ -115,7 +114,7 @@ app.post('/generate-flashcards', async (req, res) => {
     // Call our function to get the flashcards
     const flashcards = await generateAndValidateFlashcards(topic);
 
-    // Send the flashcards back to the frontend (Requirement #3, #4, #5)
+    // Send the flashcards back to the frontend 
     res.json(flashcards);
 
   } catch (error) {

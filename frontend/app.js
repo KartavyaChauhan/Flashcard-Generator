@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update the card counter
     cardCounterEl.textContent = `${index + 1} / ${currentFlashcards.length}`;
 
-    // Enable/disable buttons (Requirement #5)
+    // Enable/disable buttons 
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === currentFlashcards.length - 1;
   }
